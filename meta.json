@@ -1,0 +1,12 @@
+{
+  "name": "GitLab merge request",
+  "summary": "Comments on, approves or labels a GitLab merge request.",
+  "author": "hummerstudio",
+  "license": "MIT",
+  "tags": [
+    "official-port",
+    "gitlab",
+    "review"
+  ],
+  "homepage": "https://github.com/hummerstudio/jenkins-atom-gitlab-mr"
+}

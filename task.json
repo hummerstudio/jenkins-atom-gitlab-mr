@@ -1,0 +1,77 @@
+{
+  "atomCode": "gitlab-mr",
+  "name": "GitLab merge request",
+  "version": "1.0.0",
+  "description": "Comments on, approves or labels a GitLab merge request.",
+  "execution": {
+    "packagePath": "gitlab-mr.jar",
+    "language": "java",
+    "target": "$atom_java_path -cp gitlab-mr.jar com.jenkinschina.atom.sdk.AtomRunner"
+  },
+  "input": {
+    "baseUrl": {
+      "label": "GitLab 地址",
+      "type": "vuex-input",
+      "default": ""
+    },
+    "project": {
+      "label": "项目路径或 id（group/app）",
+      "type": "vuex-input",
+      "default": ""
+    },
+    "mrIid": {
+      "label": "Merge Request 编号",
+      "type": "vuex-input",
+      "default": ""
+    },
+    "action": {
+      "label": "动作（comment / approve / labels）",
+      "type": "vuex-input",
+      "default": "comment"
+    },
+    "comment": {
+      "label": "评论内容（comment）",
+      "type": "textarea",
+      "default": ""
+    },
+    "labels": {
+      "label": "标签（逗号分隔，labels）",
+      "type": "vuex-input",
+      "default": ""
+    },
+    "token": {
+      "label": "Personal Access Token",
+      "type": "password",
+      "default": ""
+    },
+    "timeoutSeconds": {
+      "label": "超时（秒）",
+      "type": "vuex-input",
+      "default": "30"
+    }
+  },
+  "output": {
+    "action": {
+      "type": "string",
+      "description": "执行的动作"
+    },
+    "noteId": {
+      "type": "string",
+      "description": "评论 id（comment）"
+    },
+    "labels": {
+      "type": "string",
+      "description": "设置的标签（labels）"
+    },
+    "mrUrl": {
+      "type": "string",
+      "description": "MR 链接"
+    }
+  },
+  "x-jenkins": {
+    "protocol": "jenkins-1",
+    "requires": {
+      "runner": ">=0.4.0"
+    }
+  }
+}

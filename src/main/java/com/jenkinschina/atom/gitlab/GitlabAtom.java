@@ -1,4 +1,4 @@
-package com.jenkinschina.atom.gitlabmr;
+package com.jenkinschina.atom.gitlab;
 
 import com.jenkinschina.atom.sdk.AtomContext;
 import com.jenkinschina.atom.sdk.AtomResult;
@@ -24,7 +24,7 @@ import java.util.Map;
  * one atom rather than a plugin per verb, and it also covers the violation-comments plugin that posts analysis
  * results as a note.
  */
-public class GitlabMrAtom implements AtomTask {
+public class GitlabAtom implements AtomTask {
 
     @Override
     public AtomResult run(AtomContext context) throws Exception {
@@ -121,7 +121,7 @@ public class GitlabMrAtom implements AtomTask {
                 .header("PRIVATE-TOKEN", token)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
-                .header("User-Agent", "jenkins-atom-gitlab-mr")
+                .header("User-Agent", "jenkins-atom-gitlab")
                 .method(method, HttpRequest.BodyPublishers.ofString(body, StandardCharsets.UTF_8));
         try {
             HttpResponse<String> response = client.send(builder.build(),

@@ -1,4 +1,4 @@
-# jenkins-atom-gitlab-mr
+# jenkins-atom-gitlab
 
 GitLab 合并请求的**对话侧**：评论、批准、打标签。
 

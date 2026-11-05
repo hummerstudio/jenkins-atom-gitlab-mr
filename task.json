@@ -1,12 +1,12 @@
 {
-  "atomCode": "gitlab-mr",
+  "atomCode": "gitlab",
   "name": "GitLab merge request",
   "version": "1.0.0",
   "description": "Comments on, approves or labels a GitLab merge request.",
   "execution": {
-    "packagePath": "gitlab-mr.jar",
+    "packagePath": "gitlab.jar",
     "language": "java",
-    "target": "$atom_java_path -cp gitlab-mr.jar com.jenkinschina.atom.sdk.AtomRunner"
+    "target": "$atom_java_path -cp gitlab.jar com.jenkinschina.atom.sdk.AtomRunner"
   },
   "input": {
     "baseUrl": {

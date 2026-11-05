@@ -27,5 +27,5 @@ jobs:
         run: ./tools/smoke.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: gitlab-mr-atom
-          path: dist/gitlab-mr/
+          name: gitlab-atom
+          path: dist/gitlab/

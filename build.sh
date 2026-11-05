@@ -35,9 +35,9 @@ mkdir -p "$classes/META-INF/services"
 cp src/main/resources/META-INF/services/* "$classes/META-INF/services/"
 ( cd "$sdk" && "$JAR" xf "$SDK_JAR" && rm -rf META-INF/MANIFEST.MF META-INF/services )
 
-rm -rf dist/gitlab-mr
-mkdir -p dist/gitlab-mr
-"$JAR" --create --file dist/gitlab-mr/gitlab-mr.jar -C "$classes" . -C "$sdk" .
-cp task.json dist/gitlab-mr/
-[ -f meta.json ] && cp meta.json dist/gitlab-mr/
-echo "built dist/gitlab-mr: $(ls dist/gitlab-mr | tr '\n' ' ')"
+rm -rf dist/gitlab
+mkdir -p dist/gitlab
+"$JAR" --create --file dist/gitlab/gitlab.jar -C "$classes" . -C "$sdk" .
+cp task.json dist/gitlab/
+[ -f meta.json ] && cp meta.json dist/gitlab/
+echo "built dist/gitlab: $(ls dist/gitlab | tr '\n' ' ')"

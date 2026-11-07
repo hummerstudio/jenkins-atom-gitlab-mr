@@ -37,4 +37,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: gitlab-atom
-          path: atom/dist/gitlab/
+          path: atom/target/dist/gitlab/

@@ -7,5 +7,5 @@ GitLab 合并请求的**对话侧**：评论、批准、打标签。
 项目路径里的 `/` 会被编码成 `%2F`（GitLab 的 API 要求），token 走 `PRIVATE-TOKEN` 头，不进日志。
 
 ```bash
-./build.sh && ./tools/smoke.sh
+mvn verify    # packages dist/gitlab-mr/ and runs src/test/java/atom/GitlabMrIT.java against a local GitLab
 ```
